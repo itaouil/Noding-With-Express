@@ -1,0 +1,30 @@
+{
+  "name": "noding-with-express",
+  "version": "1.0.0",
+  "description": "Express based web app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itaouil95/Noding-With-Express.git"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "jade"
+  ],
+  "author": "Ilyass Taouil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itaouil95/Noding-With-Express/issues"
+  },
+  "homepage": "https://github.com/itaouil95/Noding-With-Express#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jade": "^1.11.0",
+    "nodemailer": "^4.0.1"
+  }
+}
