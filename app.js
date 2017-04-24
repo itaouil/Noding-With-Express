@@ -26,6 +26,47 @@ app.get("/about", function(req, res) {
   res.render("about");
 });
 
+// About page
+app.get("/contact", function(req, res) {
+  res.render("contact");
+});
+
+// Contact post request
+app.get("contact/send", function(req, res) {
+
+  var transporter = nodemailer.createTranport({
+    "service": "gmail",
+    "auth": {
+      "user": "<your-mail>",
+      "pass": "<your-pass>"
+    };
+  });
+
+  var mailOptions = {
+    "from": "",
+    "to": "",
+    "subject": "use your fantasy",
+    "text": "make use of post and req body parser",
+    "html": "like text but with html tags"
+  };
+
+  // Send mail
+  transporter.sendMail(mailOptions, function(error, info) {
+
+    if (error) {
+      console.log(error);
+      res.redirect("/");
+    }
+
+    else {
+      console.log("Email sent", info);
+      res.redirect("/");
+    }
+
+  });
+
+});
+
 // Start server
 app.listen(3000);
 console.log("Server listening on port 3000 ...");
